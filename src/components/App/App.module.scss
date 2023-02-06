@@ -1,0 +1,6 @@
+@import '@globalStyles/mixins.scss';
+
+.app {
+  height: 100vh;
+  @include flexCenter();
+}

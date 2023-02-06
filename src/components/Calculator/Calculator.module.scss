@@ -1,0 +1,103 @@
+@import '@globalStyles/mixins.scss';
+
+.container {
+  position: relative;
+  width: 616px;
+  height: 876px;
+}
+
+.calcBackground {
+  height: 100%;
+  opacity: 0.2;
+  background-color: var(--trueWhite);
+  border-radius: var(--borderRadiusDefault);
+  backdrop-filter: var(--backdropFilterDefault);
+}
+
+.calculator {
+  position: absolute;
+  top: 38px;
+  right: 31px;
+  bottom: 38px;
+  left: 31px;
+  opacity: 1;
+  background: linear-gradient(155.23deg, #28518E 0%, #3A77D1 100%);
+  box-shadow: 0px 82px 158px rgba(0, 0, 0, 0.35), 0px 24.7206px 47.6324px rgba(0, 0, 0, 0.228056), 0px 10.2677px 19.7841px rgba(0, 0, 0, 0.175), 0px 3.71362px 7.1555px rgba(0, 0, 0, 0.121944);
+  border-radius: var(--borderRadiusDefault);
+}
+
+.divider {
+  position: absolute;
+  top: 32%;
+  left: 46px;
+  right: 48px;
+  width: calc(100% - 94px);
+  height: 2px;
+  opacity: 0.35;
+  background-color: var(--trueWhite);
+}
+
+.display {
+  height: 255px;
+  padding: 16px 48px 18px 16px;
+}
+
+.progressCulcContainer {
+  @include flexEnd();
+  height: 117px;
+  margin-bottom: 28px;
+  font-size: 24px;
+}
+
+.progressCulc {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: #9AA1BD transparent;
+  }
+
+  &::-webkit-scrollbar {
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #9AA1BD;
+  }
+}
+
+.printedNum {
+  @include flexEnd();
+  padding: 12px 0;
+  font-size: 56px;
+  font-family: "Geometria-Bold";
+  align-items: center;
+}
+
+.controls {
+  padding: 37px 48px 44px 46px;
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  grid-template-areas: 
+  'reset        sqrt   percent  divide'
+  'seven        eight  nine     multiply'
+  'four         five   six      subtract'
+  'one          two    three    add'
+  'doubleZero   zero   comma    equal'
+  ;
+  gap: 16px 20px;
+}
+
+.printItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 24px;
+}
+
+.image {
+  width: 0.7rem;
+}

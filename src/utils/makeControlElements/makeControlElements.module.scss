@@ -1,0 +1,107 @@
+@import '@globalStyles/mixins.scss';
+
+.control {
+  position: relative;
+  @include flexCenter();
+  padding: 20px 0;
+  font-size: 36px;
+  border-radius: 50%;
+}
+
+.controlBack {
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: var(--primaryWhite);
+    opacity: 0.12;
+  }
+}
+
+.equalBack {
+  background-color: var(--trueWhite);
+}
+
+.reset {
+  grid-area: reset;
+}
+
+.sqrt {
+  grid-area: sqrt;
+}
+
+.percent {
+  grid-area: percent;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five  {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.add {
+  grid-area: add;
+}
+
+.doubleZero {
+  grid-area: doubleZero;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.comma {
+  grid-area: comma;
+}
+
+.equal {
+  grid-area: equal;
+}
